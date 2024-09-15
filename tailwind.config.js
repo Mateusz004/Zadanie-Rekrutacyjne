@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['C:/Users/matic/OneDrive/Pulpit/Inne/Rekrutacja/Rekrutacja.{html,js}'],
+  content: ['C:/Users/matic/OneDrive/Pulpit/Inne/Rekrutacja/index.{html,js}'],
   theme: {
     extend: {
       fontFamily: {
