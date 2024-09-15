@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    @font-face {
+      font-family: 'PinkSans';
+      src: url('fonts/PinkSans-100.woff') format('woff');
+      font-weight: 100;
+      font-style: normal;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Rekrutacja</title>
+</head>
+<body class="bg-no-repeat" style="background-image: url('Subtract.png'); background-position: right top;">
+  <div class="min-h-[406px] mt-8 ml-12">
+    <h0 class="flex items-center mt-8 ml-12 mr-12">
+    <img src="Group 255.png" alt="Group 255" class="object-contain">
+    <div class="flex justify-center w-full flex space-x-4">
+      <a href="#galeria">
+      <div class="text-center  font-bebas text-customGray">
+        <h1>Galeria zdjęć</h1>
+      </div>
+      </a>
+      <div class="text-center font-bebas text-customGray">
+        <h1>FaQ</h1>
+      </div>
+  </div>
+  <button class="bg-customBlue text-white font-bold py-2 px-8 min-w-[200px] rounded">
+    Zadzwoń do nas
+  </button>
+  </h0>
+
+  <h1 class="font-bebas text-6xl mt-12 ml-12 mr-12 tracking-tighter text-customGray">
+    <b>SPRZEDAJEMY SAMOCHODY<br>Z EUROPY</b>
+  </h1>
+
+  <h2 class="bg-no-repeat bg-right min-h-[406px] mt-12 ml-12" style="background-image: url('Hero.png');">
+    <div class="font-bebas text text-customGray">
+    Kup komfortowy pojazd, aby każda podróż<br>była wyjątkowym przeżyciem
+    <div class="mt-10">
+      <a href="#galeria">
+        <button class="bg-customBlue text-white font-bold py-2 px-8 min-w-[200px] rounded">
+          Zobacz zdjęcia
+        </button>
+      </a>
+    <button class="bg-white text-customBlue border border-customBlue font-bold py-2 px-8 min-w-[200px] rounded">
+      Zadzwoń do nas
+    </button>
+    </div>
+  </h2>
+</div>
+
+  <h3 class="mt-8 ml-12 mr-12">
+    <div class="text-customBlue text-2xl">
+      Prezentacja firmy
+    </div>
+    <div id="galeria" class="font-bebas text-3xl tracking-tighter">
+      <b>ZOBACZ NASZĄ GALERIĘ ZDJĘĆ</b>
+    </div>
+  </h3>
+
+  <h4 class="flex -center w-full flex space-x-4 font-bebas  mt-12 ml-12 mr-12">
+    <div class="text-blue-500 underline">
+      Samochody Osobowe
+    </div>
+    <div class="text-customGray">
+      Samochody dostawcze
+    </div>
+  </h4>
+
+  <h5>
+    <div class="relative mt-12 ml-12 mr-12">
+      <div class="flex space-x-4 overflow-hidden w-full snap-x snap-mandatory" id="imageContainer">
+        <img src="auto1.png" alt="auto1" class="object-contain snap-center">
+        <img src="auto2.png" alt="auto2" class="object-contain snap-center">
+        <img src="auto3.png" alt="auto3" class="object-contain snap-center">
+      </div>
+    
+      <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white px-3 py-2 rounded-l" id="prevBtn">
+        &lt;
+      </button>
+    
+      <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white px-3 py-2 rounded-r" id="nextBtn">
+        &gt;
+      </button>
+    </div>
+  </h5>
+
+  <h6 class="flex justify-center flex space-x-12 bg-customGray text-white mt-12">
+    <div class="font-pinksans my-12 ml-4">
+      <div class="text-3xl tracking-tighter">
+      Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla<br> 
+      commodo.<br>
+      </div>
+      <div class="mr-20 mt-4">
+      Mauris varius ipsum mauris, rutrum lobortis magna efficitur a. Donec egestas, nisl vehicula feugiat<br> 
+      ornare, diam turpis efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et  [...]
+      </div>
+      <div class="flex items-center space-x-2"></div>
+        <a href="#" class="text-wgite underline cursor-pointer mt-2">
+          Rozwiń
+        </a>
+        <span>&#9660;</span>
+      </div>
+    </div>
+    <div class="font-pinksans my-12 mr-12">
+      <div class="text-3xl tracking-tighter ml-20">
+        Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla<br> 
+        commodo.<br>
+        </div>
+        <div class="ml-20 mt-4">
+        Mauris varius ipsum mauris, rutrum lobortis magna efficitur a. Donec egestas, nisl vehicula feugiat<br> 
+        ornare, diam turpis efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et  [...]
+        </div>
+      <div class="flex items-center space-x-2 ml-20">
+        <a href="#" class="text-wgite underline cursor-pointer mt-2">
+          Rozwiń
+        </a>
+        <span>&#9660;</span>
+      </div>
+    </div>
+  </h6>
+  <h7 class="flex justify-between bg-customGray text-white mt-1 py-4">
+    <div class="text-left ml-20 font-bold">
+      Cars Spot
+    </div>
+    <div class="text-right mr-20 underline tracking-tighter">
+      Polityka prywatności
+    </div>
+  </h7>
+
+  <script>
+    const container = document.getElementById('imageContainer');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let scrollAmount = 0;
+    const imageWidth = container.querySelector('img').clientWidth + 16;
+  
+    prevBtn.addEventListener('click', () => {
+      scrollAmount -= imageWidth;
+      container.scrollBy({ left: -imageWidth, behavior: 'smooth' });
+    });
+  
+    nextBtn.addEventListener('click', () => {
+      scrollAmount += imageWidth;
+      container.scrollBy({ left: imageWidth, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
